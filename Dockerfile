@@ -9,4 +9,6 @@ LABEL dockerImage.teamcity.version="latest" \
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     apt-get install -y nodejs
 
-RUN npm install -g node-gyp bower cordova grunt-cli gulp-cli karma-cli
+RUN npm install -g node-gyp bower cordova grunt-cli gulp-cli karma-cli code-push-cli
+
+RUN code-push login --accessKey `cat /data/teamcity_agent/conf/code-push.accesskey`
