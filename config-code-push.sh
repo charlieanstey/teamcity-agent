@@ -1,0 +1,1 @@
+code-push login --accessKey `cat /data/teamcity_agent/conf/code-push.accesskey`
